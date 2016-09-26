@@ -49,16 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Flujo.cs" />
     <Compile Include="Clases\Interfaces\IProceso.cs" />
+    <Compile Include="Clases\Interfaces\ITarea.cs" />
+    <Compile Include="Clases\Interfaces\ITipoTarea.cs" />
     <Compile Include="Clases\Proceso.cs" />
     <Compile Include="Clases\Tarea.cs" />
+    <Compile Include="Clases\TipoTarea.cs" />
     <Compile Include="DB\MotorTareaDB.cs" />
     <Compile Include="DB\MotorTareasInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\FlujoRepository.cs" />
+    <Compile Include="Repositorios\Interfaces\IFlujoRepository.cs" />
+    <Compile Include="Repositorios\Interfaces\IProcesoRepository.cs" />
+    <Compile Include="Repositorios\Interfaces\ITareaRepository.cs" />
+    <Compile Include="Repositorios\ProcesoRepository.cs" />
+    <Compile Include="Repositorios\TareaRepository.cs" />
+    <Compile Include="Servicios\FlujoService.cs" />
+    <Compile Include="Servicios\Interfaces\IFlujoService.cs" />
+    <Compile Include="Servicios\Interfaces\IProcesoService.cs" />
+    <Compile Include="Servicios\Interfaces\ITareaService.cs" />
+    <Compile Include="Servicios\ProcesoService.cs" />
+    <Compile Include="Servicios\TareaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clases\VO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
