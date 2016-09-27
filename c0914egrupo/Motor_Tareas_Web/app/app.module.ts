@@ -10,14 +10,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
+
 import { ProcesosComponent }      from './procesos.component';
 import { ProcesoDetailComponent }  from './proceso-detail.component';
 import { ProcesoService }          from './proceso.service';
 
-import { TareaComponent }      from './tareas.component';
-import { TareaDetailComponent }  from './tarea-detail.component';
-import { TareaService }          from './tarea.service';
+
 
 import { routing }              from './app.routing';
 
@@ -30,15 +28,13 @@ import { routing }              from './app.routing';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
     ProcesoDetailComponent,
-    TareasComponent,
-    TareaDetailComponent,
+  
     ProcesosComponent,
   ],
   providers: [
       ProcesoService,
-      TareaService,
+  
   ],
   bootstrap: [ AppComponent ]
 })

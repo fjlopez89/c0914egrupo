@@ -1,0 +1,9 @@
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.dll.config
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.dll
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.pdb
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.dll
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.xml
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.dll
+C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.pdb

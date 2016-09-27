@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Repositorios.Interfaces
 {
-    interface IProcesoRepository
+    public interface IProcesoRepository
     {
         Proceso getProceso(int _id);
 

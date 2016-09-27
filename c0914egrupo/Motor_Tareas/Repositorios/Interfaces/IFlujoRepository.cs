@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Repositorios
 {
-    interface IFlujoRepository
+   public interface IFlujoRepository
     {
         Flujo getFlujo(int _id);
 

@@ -1,6 +1,6 @@
 ﻿using Motor_Tareas.Repositorios;
 using Motor_Tareas.Repositorios.Interfaces;
-using Motor_Tareas.Servicios.Interfaces;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Motor_Tareas.Clases;
 using Motor_Tareas.Utiles;
 using Motor_Tareas.Clases.VO;
+using Motor_Tareas.Servicios.Interface;
 
 namespace Motor_Tareas.Servicios
 {

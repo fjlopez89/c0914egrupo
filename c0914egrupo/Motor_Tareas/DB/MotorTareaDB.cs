@@ -17,14 +17,10 @@ namespace Motor_Tareas.DB
 
             public DbSet<TipoTarea> tiposTarea { get; set; }
             public DbSet<Tarea> tareas { get; set; }
-<<<<<<< HEAD
 
-
-
-=======
             public DbSet<Flujo> flujos { get; set; }
             public DbSet<Proceso> procesos { get; set; }
->>>>>>> d5a9879e33f58f901674dcd1717fdc755639280a
+
 
             public MotorTareasDB() : base("MotorTareasDB")
             {

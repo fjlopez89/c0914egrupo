@@ -146,8 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.component.css" />
-    <Content Include="app\dashboard.component.css" />
-    <Content Include="app\dashboard.component.html" />
     <Content Include="app\proceso-detail.component.css" />
     <Content Include="app\proceso-detail.component.html" />
     <Content Include="app\procesos.component.css" />
@@ -160,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TiposTareaController.cs" />
     <Compile Include="Controllers\FlujosController.cs" />
     <Compile Include="Controllers\TareasController.cs" />
     <Compile Include="Controllers\ProcesosController.cs" />
@@ -173,10 +170,7 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
-    <TypeScriptCompile Include="app\dashboard.component.ts" />
-    <TypeScriptCompile Include="app\tarea.ts" />
     <TypeScriptCompile Include="app\proceso-detail.component.ts" />
-    <TypeScriptCompile Include="app\tarea.service.ts" />
     <TypeScriptCompile Include="app\proceso.service.ts" />
     <TypeScriptCompile Include="app\proceso.ts" />
     <TypeScriptCompile Include="app\procesos.component.ts" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Repositorios.Interfaces
 {
-    interface ITareaRepository
+    public interface ITareaRepository
     {
         Tarea getTarea(int _id);
 

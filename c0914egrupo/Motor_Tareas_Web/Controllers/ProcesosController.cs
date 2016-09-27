@@ -1,4 +1,11 @@
-﻿using Motor_Tareas.Clases;
+﻿using Microsoft.Practices.Unity;
+using Motor_Tareas.Clases;
+using Motor_Tareas.Clases.VO;
+using Motor_Tareas.Repositorios;
+using Motor_Tareas.Servicios;
+using Motor_Tareas.Servicios.Interface;
+using Motor_Tareas.Servicios.Interfaces;
+using Motor_Tareas.Utiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +17,33 @@ namespace Motor_Tareas_Web.Controllers
 {
     public class ProcesosController : ApiController
     {
+        private IProcesoService procesoService;
 
-
-        public List<Proceso> Get()
+        public ProcesosController()
         {
-            ProcesoRepository procesorepository = new ProcesoRepository();
-            ProcesoUtil procesoutil = new ProcesoUtil();
-            ProcesoService procesoservice = new ProcesoService(procesorepository, procesoutil);
+            var container = new UnityContainer();
+            container.RegisterType<FlujoUtil, FlujoUtil>();
+            container.RegisterType<TareaUtil, TareaUtil>();
+            container.RegisterType<ProcesoUtil, ProcesoUtil>();
+            container.RegisterType<TipoTareaUtil, TipoTareaUtil>();
+            container.RegisterType<IFlujoRepository, FlujoRepository>();
+            container.RegisterType<IFlujoService, FlujoService>();
+            procesoService = container.Resolve<IProcesoService>();
+        }
 
+
+        public List<ProcesoVO> Get()
+        {
             List<ProcesoVO> procesovo = new List<ProcesoVO>();
-            procesovo = procesoservice.Lista();
+            procesovo = procesoService.getProcesos();
             return procesovo;
         }
 
         public ProcesoVO Get(int id)
         {
-            ProcesoRepository procesorepository = new ProcesoRepository();
-            ProcesoUtil procesoutil = new ProcesoUtil();
-            ProcesoService procesoservice = new ProcesoService(procesorepository, procesoutil);
-
+        
             ProcesoVO procesovo = new ProcesoVO();
-            procesovo = procesoservice.Leer(id);
+            procesovo = procesoService.getProceso(id);
             return procesovo;
         }
 
@@ -38,26 +51,19 @@ namespace Motor_Tareas_Web.Controllers
         // POST api/values
         public ProcesoVO Post([FromBody]ProcesoVO _procesoVO)
         {
-            ProcesoRepository procesorepository = new ProcesoRepository();
-            ProcesoUtil procesoutil = new ProcesoUtil();
-            ProcesoService procesoservice = new ProcesoService(procesorepository, procesoutil);
 
-            ProcesoVO respuesta = procesoservice.Create(_procesoVO);
+            ProcesoVO respuesta = procesoService.addProceso(_procesoVO);
             return respuesta;
 
         }
 
         // PUT api/values/5
-        public bool Put(int id, [FromBody]ProgramaVO _programaVO)
+        public ProcesoVO Put(int id, [FromBody]ProcesoVO _procesoVO)
         {
-            ProcesoRepository procesorepository = new ProcesoRepository();
-            ProcesoUtil procesoutil = new ProcesoUtil();
-            ProcesoService procesoservice = new ProcesoService(procesorepository, procesoutil);
-
-            bool procesovo = false;
+            ProcesoVO procesovo = null;
             if (_procesoVO.id == id)
             {
-                procesovo = procesoservice.Modificar(_procesoVO);
+                procesovo = procesoService.modificaProceso(_procesoVO);
             }
             return procesovo;
 
@@ -65,16 +71,9 @@ namespace Motor_Tareas_Web.Controllers
         }
 
         // DELETE api/values/5
-        public bool Delete(int id)
+        public void Delete(int id)
         {
-
-            ProcesoRepository procesorepository = new ProcesoRepository();
-            ProcesoUtil procesoutil = new ProcesoUtil();
-            ProcesoService procesoservice = new ProcesoService(procesorepository, procesoutil);
-
-
-            bool procesovo = procesoservice.Delete(id);
-            return procesovo;
+            procesoService.eliminaProceso(id);  
         }
 
 

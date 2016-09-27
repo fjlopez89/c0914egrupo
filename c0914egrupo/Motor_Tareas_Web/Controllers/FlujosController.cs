@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-﻿using Motor_Tareas.Clases.VO;
-=======
-﻿using Microsoft.Practices.Unity;
->>>>>>> ec219e489a646b9b4d3ca6d49cdd1fbfaf1bf613
+
+using Motor_Tareas.Clases.VO;
+using Microsoft.Practices.Unity;
 using Motor_Tareas.Repositorios;
 using Motor_Tareas.Servicios;
 using Motor_Tareas.Utiles;
@@ -12,7 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Motor_Tareas.Clases.VO;
+using Motor_Tareas.Servicios.Interfaces;
 
 namespace Motor_Tareas_Web.Controllers
 {
@@ -35,14 +33,14 @@ namespace Motor_Tareas_Web.Controllers
         public List<FlujoVO> Get()
         {
             List<FlujoVO> flujovo = new List<FlujoVO>();
-            flujovo = flujoservice.getFlujos();
+            flujovo = flujoService.getFlujos();
             return flujovo;
         }
 
         public FlujoVO Get(int id)
         {
             FlujoVO flujovo = new FlujoVO();
-            flujovo = flujoservice.getFlujo(id);
+            flujovo = flujoService.getFlujo(id);
             return flujovo;
         }
 
@@ -50,11 +48,8 @@ namespace Motor_Tareas_Web.Controllers
         // POST api/values
         public FlujoVO Post([FromBody]FlujoVO _flujoVO)
         {
-            FlujoRepository flujorepository = new FlujoRepository();
-            FlujoUtil flujoutil = new FlujoUtil();
-            FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
-
-            FlujoVO respuesta = flujoservice.addFlujo(_flujoVO);
+          
+            FlujoVO respuesta = flujoService.addFlujo(_flujoVO);
             return respuesta;
 
         }
@@ -62,14 +57,10 @@ namespace Motor_Tareas_Web.Controllers
         // PUT api/values/5
         public FlujoVO Put(int id, [FromBody]FlujoVO _flujoVO)
         {
-            FlujoRepository flujorepository = new FlujoRepository();
-            FlujoUtil flujoutil = new FlujoUtil();
-            FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
-
             FlujoVO flujovo = null;
             if (_flujoVO.id == id)
             {
-                flujovo = flujoservice.modificaFlujo(_flujoVO);
+                flujovo = flujoService.modificaFlujo(_flujoVO);
             }
             return flujovo;
 
@@ -79,12 +70,7 @@ namespace Motor_Tareas_Web.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
-
-            FlujoRepository flujorepository = new FlujoRepository();
-            FlujoUtil flujoutil = new FlujoUtil();
-            FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
-
-            flujoservice.eliminaFlujo(id);
+            flujoService.eliminaFlujo(id);
          
         }
 

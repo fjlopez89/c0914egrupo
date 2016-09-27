@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Motor_Tareas.Servicios.Interfaces
+namespace Motor_Tareas.Servicios.Interface
 {
-    interface IProcesoService
+    public interface IProcesoService
     {
         ProcesoVO getProceso(int _id);
 

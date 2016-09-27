@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Servicios.Interfaces
 {
-    interface ITareaService
+    public interface ITareaService
     {
         TareaVO getTarea(int _id);
 

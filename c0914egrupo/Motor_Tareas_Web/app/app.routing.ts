@@ -1,22 +1,17 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent }  from './dashboard.component';
+
 import { ProcesosComponent }     from './procesos.component';
 import { ProcesoDetailComponent } from './proceso-detail.component';
 
-import { TareasComponent }     from './tareas.component';
-import { TareasDetailComponent } from './tareas-detail.component';
+
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/procesos',
     pathMatch: 'full'
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
   },
   {
     path: 'detail/:id',
@@ -25,14 +20,6 @@ const appRoutes: Routes = [
   {
     path: 'procesos',
     component: ProcesosComponent
-  },
-  {
-      path: 'tareas',
-      component: TareasComponent
-  },
-  {
-      path: 'detail/:id',
-      component: TareasDetailComponent
   }
 
 ];

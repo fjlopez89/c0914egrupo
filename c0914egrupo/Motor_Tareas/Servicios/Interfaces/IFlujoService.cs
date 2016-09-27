@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Servicios.Interfaces
 {
-    interface IFlujoService
+    public interface IFlujoService
     {
         FlujoVO getFlujo(int _id);
 

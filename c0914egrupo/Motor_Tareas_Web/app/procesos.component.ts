@@ -26,7 +26,7 @@ export class ProcesosComponent implements OnInit {
 
   add(nombre: string): void {
     nombre = nombre.trim();
-    if (!name) { return; }
+    if (!nombre) { return; }
     this.procesoService.create(nombre)
       .then(proceso => {
         this.procesos.push(proceso);

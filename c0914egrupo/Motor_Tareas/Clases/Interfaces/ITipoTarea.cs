@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Motor_Tareas.Clases.Interfaces
 {
-    interface ITipoTarea
+    public interface ITipoTarea
     {
         int id { get; set; }
         string nombre { get; set; }

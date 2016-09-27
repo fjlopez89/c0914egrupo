@@ -1,4 +1,10 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using Motor_Tareas.Clases.VO;
+using Motor_Tareas.Repositorios;
+using Motor_Tareas.Servicios;
+using Motor_Tareas.Servicios.Interfaces;
+using Motor_Tareas.Utiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,26 +16,32 @@ namespace Motor_Tareas_Web.Controllers
     public class TareasController : ApiController
     {
 
+        private ITareaService tareaService;
+
+        public TareasController()
+        {
+            var container = new UnityContainer();
+            container.RegisterType<FlujoUtil, FlujoUtil>();
+            container.RegisterType<TareaUtil, TareaUtil>();
+            container.RegisterType<ProcesoUtil, ProcesoUtil>();
+            container.RegisterType<TipoTareaUtil, TipoTareaUtil>();
+            container.RegisterType<IFlujoRepository, FlujoRepository>();
+            container.RegisterType<IFlujoService, FlujoService>();
+            tareaService = container.Resolve<ITareaService>();
+        }
+
 
         public List<TareaVO> Get()
         {
-            TareaRepository tarearepository = new TareaRepository();
-            TareaUtil tareautil = new TareaUtil();
-            TareaService tareaservice = new TareaService(tarearepository, tareautil);
-
             List<TareaVO> tareavo = new List<TareaVO>();
-            tareavo = tareaservice.Lista();
+            tareavo = tareaService.getTareas();
             return tareavo;
         }
 
         public TareaVO Get(int id)
         {
-            TareaRepository tarearepository = new TareaRepository();
-            TareaUtil tareautil = new TareaUtil();
-            TareaService tareaservice = new TareaService(tarearepository, tareautil);
-
             TareaVO tareavo = new TareaVO();
-            tareavo = tareaservice.Leer(id);
+            tareavo = tareaService.getTarea(id);
             return tareavo;
         }
 
@@ -37,26 +49,19 @@ namespace Motor_Tareas_Web.Controllers
         // POST api/values
         public TareaVO Post([FromBody]TareaVO _tareaVO)
         {
-            TareaRepository tarearepository = new TareaRepository();
-            TareaUtil tareautil = new TareaUtil();
-            TareaService tareaservice = new TareaService(tarearepository, tareautil);
 
-            TareaVO respuesta = tareaservice.Create(_tareaVO);
+            TareaVO respuesta = tareaService.addTarea(_tareaVO);
             return respuesta;
 
         }
 
         // PUT api/values/5
-        public bool Put(int id, [FromBody]TareaVO _tareaVO)
+        public TareaVO Put(int id, [FromBody]TareaVO _tareaVO)
         {
-            TareaRepository tarearepository = new TareaRepository();
-            TareaUtil tareautil = new TareaUtil();
-            TareaService tareaservice = new TareaService(tarearepository, tareautil);
-
-            bool tareavo = false;
+            TareaVO tareavo = null;
             if (_tareaVO.id == id)
             {
-                tareavo = tareaservice.Modificar(_tareaVO);
+                tareavo = tareaService.modificaTarea(_tareaVO);
             }
             return tareavo;
 
@@ -64,16 +69,10 @@ namespace Motor_Tareas_Web.Controllers
         }
 
         // DELETE api/values/5
-        public bool Delete(int id)
+        public void Delete(int id)
         {
-
-            TareaRepository tarearepository = new TareaRepository();
-            TareaUtil tareautil = new TareaUtil();
-            TareaService tareaservice = new TareaService(tarearepository, tareautil);
-
-
-            bool tareavo = tareaservice.Delete(id);
-            return tareavo;
+            tareaService.eliminaTarea(id);
+         
         }
 
 
