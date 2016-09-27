@@ -7,7 +7,7 @@ using Motor_Tareas.Clases;
 using static Motor_Tareas.DB.MotorTareaDB;
 using System.Data.Entity;
 
-namespace Motor_Tareas.Repositorios.Interfaces
+namespace Motor_Tareas.Repositorios
 {
     public class FlujoRepository : IFlujoRepository
     {
