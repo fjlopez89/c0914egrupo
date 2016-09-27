@@ -1,22 +1,35 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using Motor_Tareas.Repositorios;
+using Motor_Tareas.Servicios;
+using Motor_Tareas.Utiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Motor_Tareas.Clases.VO;
 
 namespace Motor_Tareas_Web.Controllers
 {
     public class FlujoController : ApiController
     {
+        private IFlujoService flujoService;
 
+        public FlujoController()
+        {
+            var container = new UnityContainer();
+            container.RegisterType<FlujoUtil, FlujoUtil>();
+            container.RegisterType<TareaUtil, TareaUtil>();
+            container.RegisterType<ProcesoUtil, ProcesoUtil>();
+            container.RegisterType<TipoTareaUtil, TipoTareaUtil>();
+            container.RegisterType<IFlujoRepository, FlujoRepository>();
+            container.RegisterType<IFlujoService, FlujoService>();
+            flujoService = container.Resolve<IFlujoService>();
+        }
 
         public List<FlujoVO> Get()
         {
-            FlujoRepository flujorepository = new FlujoRepository();
-            FlujoUtil flujoutil = new FlujoUtil();
-            FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
-
             List<FlujoVO> flujovo = new List<FlujoVO>();
             flujovo = flujoservice.Lista();
             return flujovo;
@@ -24,10 +37,6 @@ namespace Motor_Tareas_Web.Controllers
 
         public FlujoVO Get(int id)
         {
-            FlujoRepository flujorepository = new FlujoRepository();
-            FlujoUtil flujoutil = new FlujoUtil();
-            FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
-
             FlujoVO flujovo = new FlujoVO();
             flujovo = flujoservice.Leer(id);
             return flujovo;
