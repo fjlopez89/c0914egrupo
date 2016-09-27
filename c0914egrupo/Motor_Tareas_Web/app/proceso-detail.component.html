@@ -1,0 +1,12 @@
+<div *ngIf="proceso">
+  <h2>Detalle de {{proceso.nombre}}.</h2>
+  <div>
+    <label>id: </label>{{proceso.id}}</div>
+  <div>
+    <label>Nombre: </label>
+    <input [(ngModel)]="proceso.nombre" placeholder="Nombre" />
+   </div>
+  <button (click)="goBack()">Volver</button>
+  <button (click)="save()">Guardar</button>
+</div>
+

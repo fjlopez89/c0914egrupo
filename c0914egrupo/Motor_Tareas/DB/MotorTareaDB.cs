@@ -17,7 +17,7 @@ namespace Motor_Tareas.DB
 
             public DbSet<TipoTarea> tiposTarea { get; set; }
             public DbSet<Tarea> tareas { get; set; }
-     
+
 
 
 
@@ -27,4 +27,5 @@ namespace Motor_Tareas.DB
 
             }
         }
+    }
 }

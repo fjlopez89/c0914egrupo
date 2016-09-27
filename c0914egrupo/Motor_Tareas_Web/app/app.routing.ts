@@ -2,8 +2,11 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent }  from './dashboard.component';
-import { HeroesComponent }     from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { ProcesosComponent }     from './procesos.component';
+import { ProcesoDetailComponent } from './proceso-detail.component';
+
+import { TareasComponent }     from './tareas.component';
+import { TareasDetailComponent } from './tareas-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -17,19 +20,23 @@ const appRoutes: Routes = [
   },
   {
     path: 'detail/:id',
-    component: HeroDetailComponent
+    component: ProcesoDetailComponent
   },
   {
-    path: 'heroes',
-    component: HeroesComponent
+    path: 'procesos',
+    component: ProcesosComponent
+  },
+  {
+      path: 'tareas',
+      component: TareasComponent
+  },
+  {
+      path: 'detail/:id',
+      component: TareasDetailComponent
   }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 
 
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

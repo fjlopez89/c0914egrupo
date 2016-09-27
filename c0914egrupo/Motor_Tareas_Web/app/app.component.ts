@@ -7,14 +7,14 @@ import { Component }          from '@angular/core';
     <h1>{{title}}</h1>
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      <a routerLink="/procesos" routerLinkActive="active">Procesos</a>
     </nav>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  title = 'Motor de Tareas';
 }
 
 
