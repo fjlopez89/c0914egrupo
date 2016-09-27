@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Motor_Tareas.Clases;
+using Motor_Tareas.Clases.VO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,14 @@ namespace Motor_Tareas.Servicios.Interfaces
 {
     interface IProcesoService
     {
+        ProcesoVO getProceso(int _id);
+
+        List<ProcesoVO> getProcesos();
+
+        ProcesoVO addProceso(ProcesoVO _proceso);
+
+        void eliminaProceso(int _id);
+
+        ProcesoVO modificaProceso(ProcesoVO _proceso);
     }
 }
