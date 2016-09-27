@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Motor_Tareas.Repositorios.Interfaces
+namespace Motor_Tareas.Repositorios
 {
     class FlujoRepository
     {
