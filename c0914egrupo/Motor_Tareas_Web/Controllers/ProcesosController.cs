@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Motor_Tareas.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,7 +12,7 @@ namespace Motor_Tareas_Web.Controllers
     {
 
 
-        public List<ProcesoVO> Get()
+        public List<Proceso> Get()
         {
             ProcesoRepository procesorepository = new ProcesoRepository();
             ProcesoUtil procesoutil = new ProcesoUtil();
