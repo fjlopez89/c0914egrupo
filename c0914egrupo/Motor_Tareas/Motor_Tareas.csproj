@@ -56,6 +56,10 @@
     <Compile Include="Clases\Proceso.cs" />
     <Compile Include="Clases\Tarea.cs" />
     <Compile Include="Clases\TipoTarea.cs" />
+    <Compile Include="Clases\VO\FlujoVO.cs" />
+    <Compile Include="Clases\VO\ProcesoVO.cs" />
+    <Compile Include="Clases\VO\TareaVO.cs" />
+    <Compile Include="Clases\VO\TipoTareaVO.cs" />
     <Compile Include="DB\MotorTareaDB.cs" />
     <Compile Include="DB\MotorTareasInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,14 +75,16 @@
     <Compile Include="Servicios\Interfaces\ITareaService.cs" />
     <Compile Include="Servicios\ProcesoService.cs" />
     <Compile Include="Servicios\TareaService.cs" />
+    <Compile Include="Utiles\FlujoUtil.cs" />
+    <Compile Include="Utiles\ProcesoUtil.cs" />
+    <Compile Include="Utiles\TareaUtil.cs" />
+    <Compile Include="Utiles\TipoTareaUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clases\VO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

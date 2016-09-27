@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Motor_Tareas.Clases.VO;
+using Motor_Tareas.Repositorios;
+using Motor_Tareas.Servicios;
+using Motor_Tareas.Utiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -18,7 +22,7 @@ namespace Motor_Tareas_Web.Controllers
             FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
 
             List<FlujoVO> flujovo = new List<FlujoVO>();
-            flujovo = flujoservice.Lista();
+            flujovo = flujoservice.getFlujos();
             return flujovo;
         }
 
@@ -29,7 +33,7 @@ namespace Motor_Tareas_Web.Controllers
             FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
 
             FlujoVO flujovo = new FlujoVO();
-            flujovo = flujoservice.Leer(id);
+            flujovo = flujoservice.getFlujo(id);
             return flujovo;
         }
 
@@ -41,22 +45,22 @@ namespace Motor_Tareas_Web.Controllers
             FlujoUtil flujoutil = new FlujoUtil();
             FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
 
-            FlujoVO respuesta = flujoservice.Create(_flujoVO);
+            FlujoVO respuesta = flujoservice.addFlujo(_flujoVO);
             return respuesta;
 
         }
 
         // PUT api/values/5
-        public bool Put(int id, [FromBody]FlujoVO _flujoVO)
+        public FlujoVO Put(int id, [FromBody]FlujoVO _flujoVO)
         {
             FlujoRepository flujorepository = new FlujoRepository();
             FlujoUtil flujoutil = new FlujoUtil();
             FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
 
-            bool flujovo = false;
+            FlujoVO flujovo = null;
             if (_flujoVO.id == id)
             {
-                flujovo = flujoservice.Modificar(_flujoVO);
+                flujovo = flujoservice.modificaFlujo(_flujoVO);
             }
             return flujovo;
 
@@ -64,16 +68,15 @@ namespace Motor_Tareas_Web.Controllers
         }
 
         // DELETE api/values/5
-        public bool Delete(int id)
+        public void Delete(int id)
         {
 
             FlujoRepository flujorepository = new FlujoRepository();
             FlujoUtil flujoutil = new FlujoUtil();
             FlujoService flujoservice = new FlujoService(flujorepository, flujoutil);
 
-
-            bool flujovo = flujoservice.Delete(id);
-            return flujovo;
+            flujoservice.eliminaFlujo(id);
+         
         }
 
 
