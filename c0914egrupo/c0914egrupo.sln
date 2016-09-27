@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication2", "WindowsFormsApplication2\WindowsFormsApplication2.csproj", "{1A8A06BA-D241-4D24-A35F-00BB37CB8DCD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motor_Tareas", "Motor_Tareas\Motor_Tareas.csproj", "{57962682-E86A-416C-AB54-65C5499E585A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motor_Tareas_Web", "Motor_Tareas_Web\Motor_Tareas_Web.csproj", "{06692744-280A-4F38-B43F-5591D05581AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1A8A06BA-D241-4D24-A35F-00BB37CB8DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A8A06BA-D241-4D24-A35F-00BB37CB8DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A8A06BA-D241-4D24-A35F-00BB37CB8DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A8A06BA-D241-4D24-A35F-00BB37CB8DCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57962682-E86A-416C-AB54-65C5499E585A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57962682-E86A-416C-AB54-65C5499E585A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57962682-E86A-416C-AB54-65C5499E585A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57962682-E86A-416C-AB54-65C5499E585A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06692744-280A-4F38-B43F-5591D05581AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06692744-280A-4F38-B43F-5591D05581AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06692744-280A-4F38-B43F-5591D05581AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06692744-280A-4F38-B43F-5591D05581AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

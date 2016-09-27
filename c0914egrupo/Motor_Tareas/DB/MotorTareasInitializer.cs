@@ -14,15 +14,15 @@ namespace Motor_Tareas.DB
         {
             protected override void Seed(MotorTareasDB context)
             {
-                IList<Proceso> defaultTematicas = new List<Tematica>();
-                IList<Programa> defaultProgramas = new List<Programa>();
+          
 
-               
 
-           
+
+
 
                 base.Seed(context);
 
             }
         }
+    }
 }
