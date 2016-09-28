@@ -60,13 +60,36 @@ namespace Motor_Tareas.Repositorios
 
         public Tarea modificaTarea(Tarea _tarea)
         {
+            //using (var motorTareasDB = new MotorTareasDB())
+            //{
+            //    Tarea res = motorTareasDB.tareas.Attach(_tarea);
+            //    motorTareasDB.Entry(_tarea).State = EntityState.Modified;
+            //    motorTareasDB.SaveChanges();
+            //    return res;
+            //}
+
+
+            
+            Tarea p = getTarea(_tarea.id);
+            if (p == null)
+            {
+                throw new Exception("No Existe el elemento");
+            }
             using (var motorTareasDB = new MotorTareasDB())
             {
-                Tarea res = motorTareasDB.tareas.Attach(_tarea);
-                motorTareasDB.Entry(_tarea).State = EntityState.Modified;
+
+                _tarea = motorTareasDB.tareas.Attach(_tarea);
+                motorTareasDB.Entry(_tarea).State = System.Data.Entity.EntityState.Modified;
+
                 motorTareasDB.SaveChanges();
-                return res;
+         
             }
+
+            return _tarea;
+
+
+
+
         }
     }
 }

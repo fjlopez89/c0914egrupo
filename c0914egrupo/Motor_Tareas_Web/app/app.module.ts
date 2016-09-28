@@ -21,8 +21,6 @@ import { TareaService }          from './tarea.service';
 
 import { TipoTareaService }          from './tipotarea.service';
 
-
-
 import { routing }              from './app.routing';
 
 @NgModule({
@@ -46,5 +44,6 @@ import { routing }              from './app.routing';
   ],
   bootstrap: [ AppComponent ]
 })
+
 export class AppModule {
 }

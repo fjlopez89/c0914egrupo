@@ -76,8 +76,8 @@ export class TareasComponent implements OnInit {
     this.selectedTarea = tarea;
   }
 
-  gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedTarea.id]);
+  gotoDetail2(): void {
+    this.router.navigate(['/detail2', this.selectedTarea.id]);
   }
 }
 

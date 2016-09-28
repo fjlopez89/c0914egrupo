@@ -5,6 +5,9 @@ label {
   color: #607D8B;
   font-weight: bold;
 }
+#lbltipo{
+    width:200px !important;
+}
 h3{
     color:#607D8B;
 }

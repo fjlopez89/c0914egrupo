@@ -5,6 +5,9 @@ import { Location }               from '@angular/common';
 import { Tarea }        from './tarea';
 import { TareaService } from './tarea.service';
 
+import { TipoTarea }        from './tipotarea';
+import { TipoTareaService } from './tipotarea.service';
+
 @Component({
   moduleId: module.id,
   selector: 'my-tarea-detail',
@@ -13,18 +16,24 @@ import { TareaService } from './tarea.service';
 })
 export class TareaDetailComponent implements OnInit {
   tarea: Tarea;
-
+  tipotareas: TipoTarea[];
   constructor(
-    private tareaService: TareaService,
+      private tareaService: TareaService,
+      private tipotareaService: TipoTareaService,
     private route: ActivatedRoute,
     private location: Location
-  ) {}
+  ) { }
+
+ 
 
   ngOnInit(): void {
     this.route.params.forEach((params: Params) => {
       let id = +params['id'];
       this.tareaService.getTarea(id)
         .then(tarea => this.tarea = tarea);
+      });
+    this.route.params.forEach((params: Params) => {
+        this.tipotareaService.getTipoTareas().then(tipotareas => this.tipotareas = tipotareas);
     });
   }
 

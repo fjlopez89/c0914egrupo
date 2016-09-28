@@ -29,7 +29,7 @@ const appRoutes: Routes = [
       component: TareasComponent
   },
   {
-      path: 'detail/:id',
+      path: 'detail2/:id',
       component: TareaDetailComponent
   },
 

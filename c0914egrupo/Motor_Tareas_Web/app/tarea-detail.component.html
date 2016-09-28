@@ -4,9 +4,9 @@
             <h3>Detalles de la tarea</h3>
             <label for="inputnombre">Tarea</label>
             <input type="text" id="inputnombre" [(ngModel)]="tarea.nombre" class="form-control" placeholder="nombre" required="" autofocus="">
-            <label for="inputtipotarea">Tipo de la tarea</label>
+            <label id="lbltipo" for="inputtipotarea" >Tipo de la tarea</label>
             <select [(ngModel)]="tarea.TipoTareaId" class="form-control">
-                <option *ngFor="let tipotarea of tipotareas" [value]="tipotarea.TipoTareaId">{{tipotarea.nombre}}</option>
+                <option *ngFor="let tipotarea of tipotareas" [value]="tipotarea.id">{{tipotarea.nombre}}</option>
             </select>
             <button (click)="goBack()">Volver</button>
             <button (click)="save()">Guardar</button>
