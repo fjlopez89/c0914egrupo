@@ -52,7 +52,7 @@ namespace Motor_Tareas.Repositorios
         {
             using (var motorTareasDB = new MotorTareasDB())
             {
-                return motorTareasDB.tareas.ToList<Tarea>();
+                return motorTareasDB.tareas.Include("TipoTarea").ToList<Tarea>();
         
             }
         }

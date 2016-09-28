@@ -9,7 +9,7 @@ import { Proceso } from './proceso';
 export class ProcesoService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private procesosUrl = 'api/procesos';  // URL to web api
+  private procesosUrl = 'api/Procesos';  // URL to web api
 
   constructor(private http: Http) { }
 

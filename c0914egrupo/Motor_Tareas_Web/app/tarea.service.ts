@@ -9,7 +9,7 @@ import { Tarea } from './tarea';
 export class TareaService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private tareasUrl = 'api/tareas';  // URL to web api
+  private tareasUrl = 'api/Tareas';  // URL to web api
 
   constructor(private http: Http) { }
 

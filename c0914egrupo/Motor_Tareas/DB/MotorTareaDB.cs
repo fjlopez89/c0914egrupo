@@ -24,8 +24,12 @@ namespace Motor_Tareas.DB
 
             public MotorTareasDB() : base("MotorTareasDB")
             {
-                Database.SetInitializer(new MotorTareasDBInitializer());
+              
+            }
 
+            static void MotorTareaDB()
+            {
+                Database.SetInitializer(new MotorTareasDBInitializer());
             }
             protected override void OnModelCreating(DbModelBuilder modelBuilder)
             {
