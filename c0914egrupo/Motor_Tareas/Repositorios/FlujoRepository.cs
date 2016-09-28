@@ -43,6 +43,9 @@ namespace Motor_Tareas.Repositorios
             {
                 Flujo res = null;
                 res = motorTareasDB.flujos.Find(_id);
+                motorTareasDB.Entry(res).Reference(x => x.proceso).Load();
+                motorTareasDB.Entry(res).Reference(x => x.tareaOrigen).Load();
+                motorTareasDB.Entry(res).Reference(x => x.tareaDestino).Load();
                 return res;
             }
         }
@@ -51,7 +54,10 @@ namespace Motor_Tareas.Repositorios
         {
             using (var motorTareasDB = new MotorTareasDB())
             {
-                return motorTareasDB.flujos.ToList<Flujo>();
+                return motorTareasDB.flujos
+                    .Include("Tarea")
+                    .Include("Proceso")
+                    .ToList<Flujo>();
             }
         }
 
