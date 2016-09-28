@@ -44,6 +44,7 @@ namespace Motor_Tareas.Repositorios
             {
                 Tarea res = null;
                 res = motorTareasDB.tareas.Find(_id);
+                motorTareasDB.Entry(res).Reference(x => x.tipoTarea).Load();
                 return res;
             }
         }
