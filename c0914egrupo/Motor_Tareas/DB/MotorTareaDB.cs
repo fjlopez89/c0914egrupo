@@ -27,6 +27,25 @@ namespace Motor_Tareas.DB
                 Database.SetInitializer(new MotorTareasDBInitializer());
 
             }
+            protected override void OnModelCreating(DbModelBuilder modelBuilder)
+            {
+
+                modelBuilder.Entity<Flujo>()
+                    .HasOptional(a => a.proceso)
+                    .WithOptionalDependent()
+                    .WillCascadeOnDelete(false);
+
+                modelBuilder.Entity<Flujo>()
+                   .HasOptional(a => a.tareaDestino)
+                   .WithOptionalDependent()
+                   .WillCascadeOnDelete(false);
+
+                modelBuilder.Entity<Flujo>()
+                   .HasOptional(a => a.tareaOrigen)
+                   .WithOptionalDependent()
+                   .WillCascadeOnDelete(false);
+            }
+
         }
     }
 }

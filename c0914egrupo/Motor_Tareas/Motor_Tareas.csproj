@@ -52,8 +52,8 @@
     <Compile Include="Clases\Flujo.cs" />
     <Compile Include="Clases\Interfaces\IFlujo.cs" />
     <Compile Include="Clases\Interfaces\IProceso.cs" />
-    <Compile Include="Clases\Interfaces\ITarea.cs" />
     <Compile Include="Clases\Interfaces\ITipoTarea.cs" />
+    <Compile Include="Clases\Interfaces\ITarea.cs" />
     <Compile Include="Clases\Proceso.cs" />
     <Compile Include="Clases\Tarea.cs" />
     <Compile Include="Clases\TipoTarea.cs" />

@@ -16,7 +16,7 @@ namespace Motor_Tareas.DB
             protected override void Seed(MotorTareasDB context)
             {
           
-
+                
 
 
 
@@ -24,6 +24,7 @@ namespace Motor_Tareas.DB
                 base.Seed(context);
 
             }
+            
         }
     }
 }
