@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Flujo.cs" />
+    <Compile Include="Clases\Interfaces\IFlujo.cs" />
     <Compile Include="Clases\Interfaces\IProceso.cs" />
     <Compile Include="Clases\Interfaces\ITarea.cs" />
     <Compile Include="Clases\Interfaces\ITipoTarea.cs" />
@@ -67,13 +68,17 @@
     <Compile Include="Repositorios\Interfaces\IFlujoRepository.cs" />
     <Compile Include="Repositorios\Interfaces\IProcesoRepository.cs" />
     <Compile Include="Repositorios\Interfaces\ITareaRepository.cs" />
+    <Compile Include="Repositorios\Interfaces\ITipoTareaRepository.cs" />
     <Compile Include="Repositorios\ProcesoRepository.cs" />
+    <Compile Include="Repositorios\TipoTareaRepository.cs" />
     <Compile Include="Repositorios\TareaRepository.cs" />
     <Compile Include="Servicios\FlujoService.cs" />
     <Compile Include="Servicios\Interfaces\IFlujoService.cs" />
     <Compile Include="Servicios\Interfaces\IProcesoService.cs" />
     <Compile Include="Servicios\Interfaces\ITareaService.cs" />
+    <Compile Include="Servicios\Interfaces\ITipoTareaService.cs" />
     <Compile Include="Servicios\ProcesoService.cs" />
+    <Compile Include="Servicios\TipoTareaService.cs" />
     <Compile Include="Servicios\TareaService.cs" />
     <Compile Include="Utiles\FlujoUtil.cs" />
     <Compile Include="Utiles\ProcesoUtil.cs" />

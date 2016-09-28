@@ -5,12 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProcesosComponent }     from './procesos.component';
 import { ProcesoDetailComponent } from './proceso-detail.component';
 
+import { TareasComponent }     from './tareas.component';
+import { TareaDetailComponent } from './tarea-detail.component';
+
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/procesos',
+    redirectTo: '/tareas',
     pathMatch: 'full'
   },
   {
@@ -20,7 +23,15 @@ const appRoutes: Routes = [
   {
     path: 'procesos',
     component: ProcesosComponent
-  }
+  },
+  {
+      path: 'tareas',
+      component: TareasComponent
+  },
+  {
+      path: 'detail/:id',
+      component: TareaDetailComponent
+  },
 
 ];
 

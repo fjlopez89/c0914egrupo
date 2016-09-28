@@ -16,32 +16,29 @@ namespace Motor_Tareas_Web.Controllers
     public class TareasController : ApiController
     {
 
-        private ITareaService tareaService;
-
-        public TareasController()
-        {
-            var container = new UnityContainer();
-            container.RegisterType<FlujoUtil, FlujoUtil>();
-            container.RegisterType<TareaUtil, TareaUtil>();
-            container.RegisterType<ProcesoUtil, ProcesoUtil>();
-            container.RegisterType<TipoTareaUtil, TipoTareaUtil>();
-            container.RegisterType<IFlujoRepository, FlujoRepository>();
-            container.RegisterType<IFlujoService, FlujoService>();
-            tareaService = container.Resolve<ITareaService>();
-        }
-
 
         public List<TareaVO> Get()
         {
+            TareaRepository tarearepository = new TareaRepository();
+            TipoTareaUtil tipotareautil = new TipoTareaUtil();
+            TareaUtil tareautil = new TareaUtil(tipotareautil);
+            TareaService tareaservice= new TareaService(tarearepository, tareautil);
+
             List<TareaVO> tareavo = new List<TareaVO>();
-            tareavo = tareaService.getTareas();
+            tareavo = tareaservice.getTareas();
             return tareavo;
         }
 
         public TareaVO Get(int id)
         {
+            TareaRepository tarearepository = new TareaRepository();
+            TipoTareaUtil tipotareautil = new TipoTareaUtil();
+            TareaUtil tareautil = new TareaUtil(tipotareautil);
+            TareaService tareaservice = new TareaService(tarearepository, tareautil);
+
+
             TareaVO tareavo = new TareaVO();
-            tareavo = tareaService.getTarea(id);
+            tareavo = tareaservice.getTarea(id);
             return tareavo;
         }
 
@@ -49,8 +46,12 @@ namespace Motor_Tareas_Web.Controllers
         // POST api/values
         public TareaVO Post([FromBody]TareaVO _tareaVO)
         {
+            TareaRepository tarearepository = new TareaRepository();
+            TipoTareaUtil tipotareautil = new TipoTareaUtil();
+            TareaUtil tareautil = new TareaUtil(tipotareautil);
+            TareaService tareaservice = new TareaService(tarearepository, tareautil);
 
-            TareaVO respuesta = tareaService.addTarea(_tareaVO);
+            TareaVO respuesta = tareaservice.addTarea(_tareaVO);
             return respuesta;
 
         }
@@ -58,10 +59,15 @@ namespace Motor_Tareas_Web.Controllers
         // PUT api/values/5
         public TareaVO Put(int id, [FromBody]TareaVO _tareaVO)
         {
+            TareaRepository tarearepository = new TareaRepository();
+            TipoTareaUtil tipotareautil = new TipoTareaUtil();
+            TareaUtil tareautil = new TareaUtil(tipotareautil);
+            TareaService tareaservice = new TareaService(tarearepository, tareautil);
+
             TareaVO tareavo = null;
             if (_tareaVO.id == id)
             {
-                tareavo = tareaService.modificaTarea(_tareaVO);
+                tareavo = tareaservice.modificaTarea(_tareaVO);
             }
             return tareavo;
 
@@ -71,7 +77,12 @@ namespace Motor_Tareas_Web.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
-            tareaService.eliminaTarea(id);
+            TareaRepository tarearepository = new TareaRepository();
+            TipoTareaUtil tipotareautil = new TipoTareaUtil();
+            TareaUtil tareautil = new TareaUtil(tipotareautil);
+            TareaService tareaservice = new TareaService(tarearepository, tareautil);
+
+            tareaservice.eliminaTarea(id);
          
         }
 

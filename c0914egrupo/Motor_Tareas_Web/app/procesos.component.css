@@ -1,8 +1,38 @@
 .selected {
+background: #ececec;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.h{
+    text-align:center;
+}
+.btn2{
+ float: right;
+}
+
+.tabla{
+    margin-top:30px;
+}
+.detalle{
+
+    background: #ececec;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.add{
+    float:right;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+
+    text-align: center;
+}
+/*
+
+.selected {
   background-color: #CFD8DC !important;
   color: white;
 }
-.heroes {
+.procesos {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
@@ -64,4 +94,5 @@ button.delete {
   background-color: gray !important;
   color:white;
 }
+    */
 

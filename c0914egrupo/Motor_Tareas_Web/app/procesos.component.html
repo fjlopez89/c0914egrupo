@@ -1,22 +1,31 @@
-<h2>Mi Proceso</h2>
-<div>
-  <label>Nombre del proceso:</label> <input #procesoNombre />
-  <button (click)="add(procesoNombre.value); procesoNombre.value=''">
-    Crear
-  </button>
-</div>
-<ul class="procesos">
-  <li *ngFor="let proceso of procesos" (click)="onSelect(proceso)"
-      [class.selected]="proceso === selectedProceso">
-    <span class="badge">{{proceso.id}}</span>
-    <span>{{proceso.nombre}}</span>
-    <button class="delete"
-      (click)="delete(proceso); $event.stopPropagation()">x</button>
-  </li>
-</ul>
-<div *ngIf="selectedProceso">
-  <h2>
-    Esta seleccionando el proceso {{selectedProceso.nombre | uppercase}}
-  </h2>
-  <button (click)="gotoDetail()">Ver detalles</button>
-</div>
+<div class="container">
+    <div class="row">
+        <h1 class="h">Listado de Procesos</h1>
+        <button type="button" class="btn btn-success glyphicon glyphicon-plus btn2 btn-sm"> Nuevo</button>
+        <br />
+        <div class="col-md-12">
+            <br />
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Numero proceso</th>
+                            <th>Proceso</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let proceso of procesos" (click)="onSelect(proceso)" [class.selected]="proceso === selectedProceso">
+                            <td>{{proceso.id}}</td>
+                            <td>{{proceso.nombre}}</td>
+                            <td><button class="glyphicon glyphicon-pencil" (click)="gotoDetail()"></button></td>
+                            <td><button class="delete glyphicon glyphicon-trash" (click)="delete(programa); $event.stopPropagation()"></button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

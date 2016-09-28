@@ -4,9 +4,24 @@ import { Component }          from '@angular/core';
   selector: 'my-app',
 
   template: `
-    <h1>{{title}}</h1>
-    <nav>
-      <a routerLink="/procesos" routerLinkActive="active">Procesos</a>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">{{title}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a routerLink="/tareas" routerLinkActive="active">Tareas</a></li>
+            <li><a routerLink="/procesos" routerLinkActive="active">Procesos</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -15,10 +30,3 @@ import { Component }          from '@angular/core';
 export class AppComponent {
   title = 'Motor de Tareas';
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

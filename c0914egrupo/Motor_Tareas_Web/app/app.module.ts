@@ -15,6 +15,10 @@ import { ProcesosComponent }      from './procesos.component';
 import { ProcesoDetailComponent }  from './proceso-detail.component';
 import { ProcesoService }          from './proceso.service';
 
+import { TareasComponent }      from './tareas.component';
+import { TareaDetailComponent }  from './tarea-detail.component';
+import { TareaService }          from './tarea.service';
+
 
 
 import { routing }              from './app.routing';
@@ -29,11 +33,13 @@ import { routing }              from './app.routing';
   declarations: [
     AppComponent,
     ProcesoDetailComponent,
-  
-    ProcesosComponent,
+      ProcesosComponent,
+      TareaDetailComponent,
+      TareasComponent,
   ],
   providers: [
       ProcesoService,
+      TareaService,
   
   ],
   bootstrap: [ AppComponent ]
