@@ -312,6 +312,8 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
+    <TypeScriptCompile Include="app\tipotarea.service.ts" />
+    <TypeScriptCompile Include="app\tipotarea.ts" />
     <TypeScriptCompile Include="app\tarea-detail.component.ts" />
     <TypeScriptCompile Include="app\tareas.component.ts" />
     <TypeScriptCompile Include="app\tarea.service.ts" />

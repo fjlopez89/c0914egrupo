@@ -7,6 +7,9 @@ import { TareaService }         from './tarea.service';
 import { Proceso }                from './proceso';
 import { ProcesoService }         from './proceso.service';
 
+import { TipoTarea }                from './tipotarea';
+import { TipoTareaService }         from './tipotarea.service';
+
 @Component({
   moduleId: module.id,
   selector: 'my-tareas',
@@ -17,10 +20,12 @@ export class TareasComponent implements OnInit {
   tareas: Tarea[];
   selectedTarea: Tarea;
   procesos: Proceso[];
+  tipotareas: TipoTarea[];
 
   constructor(
       private tareaService: TareaService,
       private procesoService: ProcesoService,
+      private tipotareaService: TipoTareaService,
     private router: Router) { }
 
   getTareas(): void {
@@ -34,6 +39,12 @@ export class TareasComponent implements OnInit {
           .then(procesos => this.procesos = procesos);
   }
 
+    getTipoTareas(): void {
+        this.tipotareaService
+            .getTipoTareas()
+            .then(tipotareas => this.tipotareas = tipotareas);
+    }
+
   add(nombre: string, TipoTareaId: number): void {
       if (!nombre) { return; }
       this.tareaService.create(nombre, TipoTareaId)
@@ -42,6 +53,7 @@ export class TareasComponent implements OnInit {
               this.selectedTarea = null;
               this.getProcesos();
               this.getTareas();
+              this.getTipoTareas();
           });
 
   }
@@ -56,7 +68,8 @@ export class TareasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getTareas();
+      this.getTareas();
+      this.getTipoTareas();
   }
 
   onSelect(tarea: Tarea): void {

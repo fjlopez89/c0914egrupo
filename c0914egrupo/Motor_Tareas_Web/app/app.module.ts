@@ -19,6 +19,8 @@ import { TareasComponent }      from './tareas.component';
 import { TareaDetailComponent }  from './tarea-detail.component';
 import { TareaService }          from './tarea.service';
 
+import { TipoTareaService }          from './tipotarea.service';
+
 
 
 import { routing }              from './app.routing';
@@ -40,7 +42,7 @@ import { routing }              from './app.routing';
   providers: [
       ProcesoService,
       TareaService,
-  
+      TipoTareaService
   ],
   bootstrap: [ AppComponent ]
 })
