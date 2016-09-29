@@ -4,12 +4,12 @@
             <h3>Nuevo Paso</h3>
             <label for="inputnombre">Origen</label>
             <select class="form-control">
-                <option *ngFor="let tarea of tareas" [value]="tarea.id">tarea.nombre</option>
+                <option *ngFor="let tarea of tareas" [value]="tarea.id">{{tarea.nombre}}</option>
             </select>
             <div></div>
             <label for="inputnombre">Destino</label>
             <select class="form-control">
-                <option *ngFor="let tarea of tareas" [value]="tarea.id">tarea.nombre</option>
+                <option *ngFor="let tarea of tareas" [value]="tarea.id">{{tarea.nombre}}</option>
             </select>
             <div></div>
             <label for="inputnombre">Condicion</label>
