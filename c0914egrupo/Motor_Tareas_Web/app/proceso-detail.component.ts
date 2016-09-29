@@ -1,6 +1,7 @@
 import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
+import { Router }            from '@angular/router';
 
 import { Proceso }        from './proceso';
 import { ProcesoService } from './proceso.service';

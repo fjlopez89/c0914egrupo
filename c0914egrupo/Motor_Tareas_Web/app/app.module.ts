@@ -14,11 +14,14 @@ import { AppComponent }         from './app.component';
 import { ProcesosComponent }      from './procesos.component';
 import { ProcesoDetailComponent }  from './proceso-detail.component';
 import { ProcesoService }          from './proceso.service';
+import { ProcesoAddComponent }      from './proceso-add.component';
 
 import { TareasComponent }      from './tareas.component';
 import { TareaDetailComponent }  from './tarea-detail.component';
 import { TareaService }          from './tarea.service';
 import { TareaAddComponent }  from './tarea-add.component';
+
+import { FlujoAddComponent} from './flujo-add.component';
 
 import { TipoTareaService }          from './tipotarea.service';
 
@@ -37,7 +40,9 @@ import { routing }              from './app.routing';
       ProcesosComponent,
       TareaDetailComponent,
       TareasComponent,
-      TareaAddComponent 
+      TareaAddComponent,
+      ProcesoAddComponent,
+      FlujoAddComponent
   ],
   providers: [
       ProcesoService,

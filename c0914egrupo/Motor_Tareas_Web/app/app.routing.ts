@@ -9,6 +9,8 @@ import { TareasComponent }     from './tareas.component';
 import { TareaDetailComponent } from './tarea-detail.component';
 
 import { TareaAddComponent } from './tarea-add.component';
+import { ProcesoAddComponent }      from './proceso-add.component';
+import { FlujoAddComponent} from './flujo-add.component';
 
 
 
@@ -37,6 +39,14 @@ const appRoutes: Routes = [
   {
       path: 'add',
       component: TareaAddComponent
+  },
+  {
+      path: 'addproceso',
+      component: ProcesoAddComponent
+  },
+  {
+      path: 'addflujo',
+      component: FlujoAddComponent
   },
 
 ];

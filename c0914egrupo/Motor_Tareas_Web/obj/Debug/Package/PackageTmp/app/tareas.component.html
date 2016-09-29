@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+       
+            <h1 class="h">Listado de Tareas</h1>
+         
+            <button  class="btn btn-success glyphicon glyphicon-plus btn2 btn-sm" (click)="gotoAdd()"> Nuevo</button>
+            <br />
+            <div class="col-md-12">
+                <br />
+                <div class="table-responsive">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Numero tarea</th>
+                                <th>Tarea</th>
+                                <th>Tipo de tarea</th>
+                                <th>Modificar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tarea of tareas" (click)="onSelect(tarea)" [class.selected]="tarea === selectedTarea">
+                                <td>{{tarea.id}}</td>
+                                <td>{{tarea.nombre}}</td>
+                                <td>{{tarea.tipotarea.nombre}}</td>
+                                <td><button  class="glyphicon glyphicon-pencil btn btn-warning" (click)="gotoDetail2()"></button></td>
+                                <td><button  class="delete glyphicon glyphicon-trash btn btn-danger" (click)="delete(tarea); $event.stopPropagation()"></button></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>

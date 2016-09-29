@@ -7,3 +7,13 @@ C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.xml
 C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.dll
 C:\Users\dpenil\Projecto\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.pdb
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.dll.config
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.dll
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\Motor_Tareas.pdb
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.dll
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.xml
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.csprojResolveAssemblyReference.cache
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.dll
+C:\Users\paco\Documents\c0914egrupo\c0914egrupo\Motor_Tareas\obj\Debug\Motor_Tareas.pdb

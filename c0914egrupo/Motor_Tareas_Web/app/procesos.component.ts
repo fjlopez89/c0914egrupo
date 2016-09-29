@@ -54,5 +54,9 @@ export class ProcesosComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedProceso.id]);
   }
+
+  gotoAdd(): void {
+      this.router.navigate(['/addproceso']);
+  }
 }
 

@@ -1,0 +1,98 @@
+.selected {
+background: #ececec;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.h{
+    text-align:center;
+}
+.btn2{
+ float: right;
+}
+
+.tabla{
+    margin-top:30px;
+}
+.detalle{
+
+    background: #ececec;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.add{
+    float:right;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+
+    text-align: center;
+}
+
+/*
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.procesos {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.procesos li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.procesos li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.procesos li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.procesos .text {
+  position: relative;
+  top: -3px;
+}
+.procesos .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button.delete {
+  float:right;
+  margin-top: 2px;
+  margin-right: .8em;
+  background-color: gray !important;
+  color:white;
+}
+    */
+

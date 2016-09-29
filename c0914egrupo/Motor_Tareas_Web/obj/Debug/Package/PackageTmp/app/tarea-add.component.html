@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div  class="detalle">
+            <h3>Nueva tarea</h3>
+            <label for="inputnombre">Tarea</label>
+            <input type="text" id="inputnombre" class="form-control" placeholder="nombre" #tareanombre required="" autofocus="">
+            <label id="lbltipo" for="inputtipotarea" >Tipo de la tarea</label>
+            <select class="form-control" #tareatipotareaId>
+                <option *ngFor="let tipotarea of tipotareas" #tareatipotareaId [value]="tipotarea.tipotareaId">{{tipotarea.nombre}}</option>
+            </select>
+            <button (click)="add(tareanombre.value , tareatipotareaId.value); tareanombre.value=''; tareatipotareaId.value='';">Crear</button>
+            <button (click)="goBack()">Volver</button>
+        </div>
+    </div>
+</div>
+
