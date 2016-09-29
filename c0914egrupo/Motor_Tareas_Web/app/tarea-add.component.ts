@@ -27,7 +27,18 @@ export class TareaAddComponent implements OnInit {
     private location: Location
   ) { }
 
- 
+  getTareas(): void {
+      this.tareaService
+          .getTareas()
+          .then(tareas => this.tareas = tareas);
+  }
+  
+
+  getTipoTareas(): void {
+      this.tipotareaService
+          .getTipoTareas()
+          .then(tipotareas => this.tipotareas = tipotareas);
+  }
 
   ngOnInit(): void {
       this.route.params.forEach((params: Params) => {
@@ -47,6 +58,8 @@ export class TareaAddComponent implements OnInit {
                
             });
         this.goBack();
+        this.getTareas();
+        this.getTipoTareas();
     }
 
 

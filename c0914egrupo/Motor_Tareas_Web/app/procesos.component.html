@@ -19,8 +19,8 @@
                         <tr *ngFor="let proceso of procesos" (click)="onSelect(proceso)" [class.selected]="proceso === selectedProceso">
                             <td>{{proceso.id}}</td>
                             <td>{{proceso.nombre}}</td>
-                            <td><button class="glyphicon glyphicon-pencil" (click)="gotoDetail()"></button></td>
-                            <td><button class="delete glyphicon glyphicon-trash" (click)="delete(programa); $event.stopPropagation()"></button></td>
+                            <td><button class="glyphicon glyphicon-pencil btn btn-warning"  (click)="gotoDetail()"></button></td>
+                            <td><button class="delete glyphicon glyphicon-trash btn btn-danger" (click)="delete(programa); $event.stopPropagation()"></button></td>
 
                         </tr>
                     </tbody>
