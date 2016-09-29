@@ -18,6 +18,7 @@ export class TareaAddComponent implements OnInit {
     tarea: Tarea;
     tareas: Tarea[];
     tipotareas: TipoTarea[];
+    selectedTarea: Tarea;
 
   constructor(
       private tareaService: TareaService,
@@ -29,23 +30,26 @@ export class TareaAddComponent implements OnInit {
  
 
   ngOnInit(): void {
-    
+      this.route.params.forEach((params: Params) => {
+          this.tareaService.getTareas().then(tareas => this.tareas = tareas);
+      });
+      this.route.params.forEach((params: Params) => {
+          this.tipotareaService.getTipoTareas().then(tipotareas => this.tipotareas = tipotareas);
+      });
   }
 
-    add(nombre: string, TipoTareaId: number): void {
+    add(nombre: string, tipotareaId: number): void {
         if (!nombre) { return; }
-        this.tareaService.create(nombre, TipoTareaId)
+        this.tareaService.create(nombre, tipotareaId)
             .then(tarea => {
                 this.tareas.push(tarea);
-             
+                this.selectedTarea = null;
+               
             });
-
+        this.goBack();
     }
 
-  save(): void {
-      this.tareaService.update(this.tarea)
-      .then(() => this.goBack());
-  }
+
 
   goBack(): void {
     this.location.back();

@@ -33,9 +33,9 @@ export class TareaService {
       .catch(this.handleError);
   }
 
-  create( nombre: string, TipoTareaId: number): Promise<Tarea> {
+  create( nombre: string, tipotareaId: number): Promise<Tarea> {
       return this.http
-          .post(this.tareasUrl, JSON.stringify({ nombre: nombre, TipoTareaId: TipoTareaId }), { headers: this.headers })
+          .post(this.tareasUrl, JSON.stringify({ nombre: nombre, tipotareaId: tipotareaId }), { headers: this.headers })
           .toPromise()
           .then(res => res.json())
           .catch(this.handleError);
@@ -44,7 +44,7 @@ export class TareaService {
   update(tarea: Tarea): Promise<Tarea> {
     const url = `${this.tareasUrl}/${tarea.id}`;
     return this.http
-      .put(url, JSON.stringify(tarea), {headers: this.headers})
+      .put(url, tarea, {headers: this.headers})
       .toPromise()
       .then(() => tarea)
       .catch(this.handleError);

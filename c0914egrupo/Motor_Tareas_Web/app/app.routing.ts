@@ -15,7 +15,7 @@ import { TareaAddComponent } from './tarea-add.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/tareas',
+    redirectTo: '/Tareas',
     pathMatch: 'full'
   },
   {
@@ -23,11 +23,11 @@ const appRoutes: Routes = [
     component: ProcesoDetailComponent
   },
   {
-    path: 'procesos',
+    path: 'Procesos',
     component: ProcesosComponent
   },
   {
-      path: 'tareas',
+      path: 'Tareas',
       component: TareasComponent
   },
   {
@@ -35,7 +35,7 @@ const appRoutes: Routes = [
       component: TareaDetailComponent
   },
   {
-      path: 'add/',
+      path: 'add',
       component: TareaAddComponent
   },
 

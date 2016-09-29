@@ -22,7 +22,7 @@ export class TipoTareaService {
 
   getTipoTarea(id: number): Promise<TipoTarea> {
     return this.getTipoTareas()
-        .then(tipotareas => tipotareas.find(tipotarea => tipotarea.TipoTareaId === id));
+        .then(tipotareas => tipotareas.find(tipotarea => tipotarea.tipotareaId === id));
   }
 
   delete(id: number): Promise<void> {
@@ -42,7 +42,7 @@ export class TipoTareaService {
   }
 
   update(tipotarea: TipoTarea): Promise<TipoTarea> {
-      const url = `${this.tipotareasUrl}/${tipotarea.TipoTareaId}`;
+      const url = `${this.tipotareasUrl}/${tipotarea.tipotareaId}`;
     return this.http
       .put(url, JSON.stringify(tipotarea), {headers: this.headers})
       .toPromise()

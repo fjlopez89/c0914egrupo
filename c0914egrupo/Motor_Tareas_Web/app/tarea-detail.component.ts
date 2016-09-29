@@ -39,6 +39,7 @@ export class TareaDetailComponent implements OnInit {
   }
 
   save(): void {
+      this.tarea.tipotarea = undefined;
     this.tareaService.update(this.tarea)
       .then(() => this.goBack());
   }
