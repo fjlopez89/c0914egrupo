@@ -4,7 +4,7 @@
     {
         int id { get; set; }
         string nombre { get; set; }
-        TipoTarea tipoTarea { get; set; }
-        int TipoTareaId { get; set; }
+        TipoTarea tipotarea { get; set; }
+        int tipotareaId { get; set; }
     }
 }

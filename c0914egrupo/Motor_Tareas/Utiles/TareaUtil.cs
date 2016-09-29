@@ -28,8 +28,8 @@ namespace Motor_Tareas.Utiles
                 Tarea res = new Tarea();
                 res.id = _tarea.id;
                 res.nombre = _tarea.nombre;
-                res.TipoTareaId = _tarea.TipoTareaId;
-                res.tipoTarea = tipoTareaUtil.ConvierteTipoTareaVOToEntity(_tarea.tipoTarea);
+                res.tipotareaId = _tarea.tipotareaId;
+                res.tipotarea = tipoTareaUtil.ConvierteTipoTareaVOToEntity(_tarea.tipotarea);
                 return res;
             }
         }
@@ -45,8 +45,8 @@ namespace Motor_Tareas.Utiles
                 TareaVO res = new TareaVO();
                 res.id = _tarea.id;
                 res.nombre = _tarea.nombre;
-                res.TipoTareaId = _tarea.TipoTareaId;
-                res.tipoTarea = tipoTareaUtil.ConvierteEntityToTipoTareaVO(_tarea.tipoTarea);
+                res.tipotareaId = _tarea.tipotareaId;
+                res.tipotarea = tipoTareaUtil.ConvierteEntityToTipoTareaVO(_tarea.tipotarea);
                 return res;
             }
         }

@@ -15,9 +15,10 @@ namespace Motor_Tareas.Clases
         public int id { get; set; }
         public string nombre { get; set; }
         
-        public int TipoTareaId { get; set; }
-        [ForeignKey("TipoTareaId")]
-        public virtual TipoTarea tipoTarea { get; set; }
+        public int tipotareaId { get; set; }
+
+        [ForeignKey("tipotareaId")]
+        public virtual TipoTarea tipotarea { get; set; }
 
         public Tarea()
         { }

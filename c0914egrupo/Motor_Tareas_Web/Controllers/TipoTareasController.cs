@@ -61,7 +61,7 @@ namespace Motor_Tareas_Web.Controllers
             TipoTareaService tipotareaservice = new TipoTareaService(tipotarearepository, tipotareautil);
 
             TipoTareaVO tipotareavo = null;
-            if (_tipotareaVO.id == id)
+            if (_tipotareaVO.tipotareaId == id)
             {
                 tipotareavo = tipotareaservice.modificaTipoTarea(_tipotareaVO);
             }

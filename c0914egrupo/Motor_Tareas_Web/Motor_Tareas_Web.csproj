@@ -129,6 +129,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\tarea-add.component.html" />
+    <Content Include="app\tarea-add.component.css" />
     <Content Include="app\tarea-detail.component.css" />
     <Content Include="app\tarea-detail.component.html" />
     <Content Include="app\tareas.component.css" />
@@ -312,6 +314,7 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routing.ts" />
+    <TypeScriptCompile Include="app\tarea-add.component.ts" />
     <TypeScriptCompile Include="app\tipotarea.service.ts" />
     <TypeScriptCompile Include="app\tipotarea.ts" />
     <TypeScriptCompile Include="app\tarea-detail.component.ts" />

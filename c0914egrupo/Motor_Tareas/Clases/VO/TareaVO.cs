@@ -11,8 +11,8 @@ namespace Motor_Tareas.Clases.VO
         public int id { get; set; }
         public string nombre { get; set; }
 
-        public int TipoTareaId { get; set; }
-        public TipoTareaVO tipoTarea { get; set; }
+        public int tipotareaId { get; set; }
+        public TipoTareaVO tipotarea { get; set; }
 
         public TareaVO()
         { }

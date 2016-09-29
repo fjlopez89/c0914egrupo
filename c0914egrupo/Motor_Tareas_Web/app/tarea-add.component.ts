@@ -10,13 +10,14 @@ import { TipoTareaService } from './tipotarea.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'my-tarea-detail',
-  templateUrl: 'tarea-detail.component.html',
-  styleUrls: [ 'tarea-detail.component.css' ]
+  selector: 'my-tarea-add',
+  templateUrl: 'tarea-add.component.html',
+  styleUrls: [ 'tarea-add.component.css' ]
 })
-export class TareaDetailComponent implements OnInit {
-  tarea: Tarea;
-  tipotareas: TipoTarea[];
+export class TareaAddComponent implements OnInit {
+    tarea: Tarea;
+    tareas: Tarea[];
+    tipotareas: TipoTarea[];
 
   constructor(
       private tareaService: TareaService,
@@ -28,18 +29,21 @@ export class TareaDetailComponent implements OnInit {
  
 
   ngOnInit(): void {
-      this.route.params.forEach((params: Params) => {
-          let id = +params['id'];
-          this.tareaService.getTarea(id)
-              .then(tarea => this.tarea = tarea);
-      });
-      this.route.params.forEach((params: Params) => {
-          this.tipotareaService.getTipoTareas().then(tipotareas => this.tipotareas = tipotareas);
-      });
+    
   }
 
+    add(nombre: string, TipoTareaId: number): void {
+        if (!nombre) { return; }
+        this.tareaService.create(nombre, TipoTareaId)
+            .then(tarea => {
+                this.tareas.push(tarea);
+             
+            });
+
+    }
+
   save(): void {
-    this.tareaService.update(this.tarea)
+      this.tareaService.update(this.tarea)
       .then(() => this.goBack());
   }
 

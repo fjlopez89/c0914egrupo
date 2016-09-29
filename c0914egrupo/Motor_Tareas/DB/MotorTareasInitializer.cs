@@ -17,25 +17,25 @@ namespace Motor_Tareas.DB
             {
 
 
-                IList<TipoTarea> defaultTiposTarea = new List<TipoTarea>();
-                IList<Tarea> defaultTareas = new List<Tarea>();
+                //IList<TipoTarea> defaultTiposTarea = new List<TipoTarea>();
+                //IList<Tarea> defaultTareas = new List<Tarea>();
 
 
 
-                defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Inicio" });
-                defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Fin" });
-                defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Tarea" });
+                //defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Inicio" });
+                //defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Fin" });
+                //defaultTiposTarea.Add(new Clases.TipoTarea() { nombre = "Tarea" });
 
              
 
-                foreach (TipoTarea t in defaultTiposTarea)
-                {
-                    context.tiposTarea.Add(t);
-                    context.SaveChanges();
-                }
+                //foreach (TipoTarea t in defaultTiposTarea)
+                //{
+                //    context.tipostareas.Add(t);
+                //    context.SaveChanges();
+                //}
                
 
-                base.Seed(context);
+                //base.Seed(context);
 
 
 

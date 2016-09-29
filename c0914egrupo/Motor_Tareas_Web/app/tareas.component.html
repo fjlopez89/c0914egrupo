@@ -3,7 +3,7 @@
        
             <h1 class="h">Listado de Tareas</h1>
          
-            <button type="button" class="btn btn-success glyphicon glyphicon-plus btn2 btn-sm"> Nuevo</button>
+            <button type="button" class="btn btn-success glyphicon glyphicon-plus btn2 btn-sm" (click)="gotoAdd()"> Nuevo</button>
             <br />
             <div class="col-md-12">
                 <br />
@@ -22,9 +22,9 @@
                             <tr *ngFor="let tarea of tareas" (click)="onSelect(tarea)" [class.selected]="tarea === selectedTarea">
                                 <td>{{tarea.id}}</td>
                                 <td>{{tarea.nombre}}</td>
-                                <td>{{tarea.tipoTarea.nombre}}</td>
+                                <td>{{tarea.tipotarea.nombre}}</td>
                                 <td><button type="button" class="glyphicon glyphicon-pencil btn btn-warning" (click)="gotoDetail2()"></button></td>
-                                <td><button type="button" class="delete glyphicon glyphicon-trash btn btn-danger" (click)="delete(programa); $event.stopPropagation()"></button></td>
+                                <td><button type="button" class="delete glyphicon glyphicon-trash btn btn-danger" (click)="delete(tarea); $event.stopPropagation()"></button></td>
 
                             </tr>
                         </tbody>

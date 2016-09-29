@@ -33,9 +33,9 @@ export class TareaService {
       .catch(this.handleError);
   }
 
-  create( nombre: string, TipoTarea: number): Promise<Tarea> {
+  create( nombre: string, TipoTareaId: number): Promise<Tarea> {
       return this.http
-          .post(this.tareasUrl, JSON.stringify({ nombre: nombre, TipoTarea: TipoTarea  }), { headers: this.headers })
+          .post(this.tareasUrl, JSON.stringify({ nombre: nombre, TipoTareaId: TipoTareaId }), { headers: this.headers })
           .toPromise()
           .then(res => res.json())
           .catch(this.handleError);

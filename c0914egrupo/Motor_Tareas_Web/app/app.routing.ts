@@ -8,6 +8,8 @@ import { ProcesoDetailComponent } from './proceso-detail.component';
 import { TareasComponent }     from './tareas.component';
 import { TareaDetailComponent } from './tarea-detail.component';
 
+import { TareaAddComponent } from './tarea-add.component';
+
 
 
 const appRoutes: Routes = [
@@ -31,6 +33,10 @@ const appRoutes: Routes = [
   {
       path: 'detail2/:id',
       component: TareaDetailComponent
+  },
+  {
+      path: 'add/',
+      component: TareaAddComponent
   },
 
 ];

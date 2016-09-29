@@ -10,8 +10,8 @@ namespace Motor_Tareas.Clases
 {
     public class TipoTarea: ITipoTarea
     {
-        [Key]
-        public int id { get; set; }
+        
+        public int tipotareaId { get; set; }
         public string nombre { get; set; }
 
         public TipoTarea()

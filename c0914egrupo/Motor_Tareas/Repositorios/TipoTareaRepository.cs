@@ -21,7 +21,7 @@ namespace Motor_Tareas.Repositorios
             using (var motorTareasDB = new MotorTareasDB())
             {
                 TipoTarea res = null;
-                res = motorTareasDB.tiposTarea.Add(_tipotarea);
+                res = motorTareasDB.tipostareas.Add(_tipotarea);
                 motorTareasDB.SaveChanges();
                 return res;
             }
@@ -32,8 +32,8 @@ namespace Motor_Tareas.Repositorios
             using (var motorTareasDB = new MotorTareasDB())
             {
                 TipoTarea res = null;
-                res = motorTareasDB.tiposTarea.Find(_id);
-                motorTareasDB.tiposTarea.Remove(res);
+                res = motorTareasDB.tipostareas.Find(_id);
+                motorTareasDB.tipostareas.Remove(res);
                 motorTareasDB.SaveChanges();
             }
         }
@@ -43,7 +43,7 @@ namespace Motor_Tareas.Repositorios
             using (var motorTareasDB = new MotorTareasDB())
             {
                 TipoTarea res = null;
-                res = motorTareasDB.tiposTarea.Find(_id);
+                res = motorTareasDB.tipostareas.Find(_id);
                 return res;
             }
         }
@@ -52,7 +52,7 @@ namespace Motor_Tareas.Repositorios
         {
             using (var motorTareasDB = new MotorTareasDB())
             {
-                return motorTareasDB.tiposTarea.ToList<TipoTarea>();
+                return motorTareasDB.tipostareas.ToList<TipoTarea>();
             }
         }
 
@@ -60,7 +60,7 @@ namespace Motor_Tareas.Repositorios
         {
             using (var motorTareasDB = new MotorTareasDB())
             {
-                TipoTarea res = motorTareasDB.tiposTarea.Attach(_tipotarea);
+                TipoTarea res = motorTareasDB.tipostareas.Attach(_tipotarea);
                 motorTareasDB.Entry(_tipotarea).State = EntityState.Modified;
                 motorTareasDB.SaveChanges();
                 return res;

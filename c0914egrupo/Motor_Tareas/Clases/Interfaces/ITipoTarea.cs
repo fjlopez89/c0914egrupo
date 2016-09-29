@@ -8,7 +8,7 @@ namespace Motor_Tareas.Clases.Interfaces
 {
     public interface ITipoTarea
     {
-        int id { get; set; }
+        int tipotareaId { get; set; }
         string nombre { get; set; }
     }
 }

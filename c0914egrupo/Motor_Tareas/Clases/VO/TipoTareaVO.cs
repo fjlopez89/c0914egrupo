@@ -8,7 +8,7 @@ namespace Motor_Tareas.Clases.VO
 {
     public class TipoTareaVO
     {
-        public int id { get; set; }
+        public int tipotareaId { get; set; }
         public string nombre { get; set; }
 
         public TipoTareaVO()

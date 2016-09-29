@@ -24,7 +24,7 @@ namespace Motor_Tareas.Utiles
             else
             {
                 TipoTarea res = new TipoTarea();
-                res.id = _tipoTarea.id;
+                res.tipotareaId = _tipoTarea.tipotareaId;
                 res.nombre = _tipoTarea.nombre;
                 return res;
             }
@@ -39,7 +39,7 @@ namespace Motor_Tareas.Utiles
             else
             {
                 TipoTareaVO res = new TipoTareaVO();
-                res.id = _tipoTarea.id;
+                res.tipotareaId = _tipoTarea.tipotareaId;
                 res.nombre = _tipoTarea.nombre;
                 return res;
             }
